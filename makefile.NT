@@ -1,0 +1,25 @@
+JAVA_HOME = C:\"Program Files"\Java\jdk1.8.0_91
+
+JAVAS = src\org\aventinus\usb\*.java 
+JAVAS = $(JAVAS) ..\common\src\org\aventinus\json\*.java 
+JAVAS = $(JAVAS) ..\common\src\org\aventinus\gui\*.java 
+JAVAS = $(JAVAS) ..\common\src\org\aventinus\database\*.java 
+JAVAS = $(JAVAS) ..\common\src\org\aventinus\util\*.java 
+
+JPATH = .;.\lib\jna-4.0.0.jar;.\lib\jna-platform-4.0.0.jar
+
+JAR = jar\common.jar
+
+all: $(JAR)
+
+$(JAR): $(JAVAS) makefile.NT
+ if exist classes rmdir /s /q classes
+ mkdir classes
+ $(JAVA_HOME)\bin\javac -Xlint -d classes -classpath classes;$(JPATH) $(JAVAS)
+ if exist jar rmdir /s /q jar
+ mkdir jar
+ $(JAVA_HOME)\bin\jar -cvf $@ -C classes .
+
+clean:
+ if exist classes rmdir /s /q classes
+ if exist jar rmdir /s /q jar
