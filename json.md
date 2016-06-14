@@ -1,4 +1,3 @@
-<html>
     <b>A JSON tool</b>
     
     I use a modified version of JSON to store configuration and state. I find that it is clear, lightweight, and 
@@ -60,5 +59,3 @@
     <br>
     Note 5: You cannot get a JSONObject or a JSONArray as a String. object1.getString("c") will fail;
     object1.getArray("c").toString() will work.
-    
-</html>
