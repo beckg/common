@@ -127,8 +127,9 @@ first time that you set this up. This is for Fedora, other builds might have sli
 Create or modify a custom rule file, say "/etc/udev/rules.d/10-usb-custom.rules". Add the following line.
 <pre>
     SUBSYSTEM=="usb", ATTR{idVendor}=="04d8", ATTR{idProduct}=="0041" SYMLINK+="pic41", GROUP="pic"
-</pre><br>
-    Add yourself to the pic group
+</pre>
+
+Add yourself to the pic group
 <pre>
     usermod +G pic gordon
 </pre>
