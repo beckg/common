@@ -1,4 +1,5 @@
 <b>USB for PIC</b>
+<br><br>
 I have found a USB interface very useful on boards with PIC processors, partly for in-circuit 
 programming using USB (so much easier than serial), partly as a debugging tool, and 
 partly because the final product can talk to the outside world. It takes little space and normally works 
@@ -96,9 +97,8 @@ I do not think that this re-publish breaks any agreement. All of the existing li
 <br><br>
 See the BootLoader repository for building and use.
 <br><br>
-
 The code needs JavaNativeAccess (jna) to compile - we use jna to invoke the platform specific APIs.
-I jave checked in a version of jna but you should really get a version from git.
+I jave checked in a version of jna but you should really get a version from git:
 <a href="https://github.com/twall/jna">jna</a> 
 Refer to the git respository for more details. The authors have done a wonderful job. 
 <br><br>
@@ -127,7 +127,7 @@ first time that you set this up. This is for Fedora, other builds might have sli
 Create or modify a custom rule file, say "/etc/udev/rules.d/10-usb-custom.rules". Add the following line.
 <pre>
     SUBSYSTEM=="usb", ATTR{idVendor}=="04d8", ATTR{idProduct}=="0041" SYMLINK+="pic41", GROUP="pic"
-</pre>
+</pre><br>
     Add yourself to the pic group
 <pre>
     usermod +G pic gordon
