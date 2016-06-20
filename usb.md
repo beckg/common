@@ -10,6 +10,8 @@ would not work with the USB boot-code, and ... I also saw that other people were
 I developed a working solution. Not sure if it is still of interest to anyone but I thought that I would 
 publish in any event.
 <br><br>
+See the BootLoader repository for usage.
+<br><br>
 
 <b>USB basics</b>
 <br><br>
